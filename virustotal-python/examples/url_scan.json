@@ -1,0 +1,626 @@
+URL: github.com ID: Z2l0aHViLmNvbQ
+url
+{'attributes': {'categories': {'BitDefender': 'computersandsoftware',
+                               'Dr.Web': 'social networks',
+                               'Forcepoint ThreatSeeker': 'information '
+                                                          'technology',
+                               'Sophos': 'information technology',
+                               'Xcitium Verdict Cloud': 'media sharing',
+                               'alphaMountain.ai': 'Information Technology'},
+                'first_submission_date': 1292236763,
+                'html_meta': {'apple-itunes-app': ['app-id=1477376905'],
+                              'browser-errors-url': ['https://api.github.com/_private/browser/errors'],
+                              'browser-optimizely-client-errors-url': ['https://api.github.com/_private/browser/optimizely_client/errors'],
+                              'browser-stats-url': ['https://api.github.com/_private/browser/stats'],
+                              'current-catalog-service-hash': ['40dc28bd654b20f337468a532ff456ed5863889cfbb4e982b793597321d48d3f'],
+                              'description': ['GitHub is where over 100 '
+                                              'million developers shape the '
+                                              'future of software, together. '
+                                              'Contribute to the open source '
+                                              'community, manage your Git '
+                                              'repositories, review code like '
+                                              'a pro, track bugs and features, '
+                                              'power your CI/CD and DevOps '
+                                              'workflows, and secure code '
+                                              'before you commit it.'],
+                              'enabled-features': ['TURBO_EXPERIMENT_RISKY,IMAGE_METRIC_TRACKING,GEOJSON_AZURE_MAPS,ACTIONS_SIGNALR_RECONNECT_JITTER'],
+                              'expected-hostname': ['github.com'],
+                              'fb:app_id': ['1401488693436528'],
+                              'github-keyboard-shortcuts': ['dashboards'],
+                              'google-site-verification': ['c1kuD-K2HIVF635lypcsWPoD4kilo5-jA_wBFyT4uMY',
+                                                           'KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU',
+                                                           'ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA',
+                                                           'GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc',
+                                                           'Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I'],
+                              'hostname': ['github.com'],
+                              'html-safe-nonce': ['5b11ea40359395fe61ddd7af0eaa44a00139c6c4f8afa36a5b9b140bdd3ac548'],
+                              'is_logged_out_page': ['true'],
+                              'octolytics-url': ['https://collector.github.com/github/collect'],
+                              'og:description': ['GitHub is where over 100 '
+                                                 'million developers shape the '
+                                                 'future of software, '
+                                                 'together. Contribute to the '
+                                                 'open source community, '
+                                                 'manage your Git '
+                                                 'repositories, review code '
+                                                 'like a pro, track bugs and '
+                                                 'fea...'],
+                              'og:image': ['https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png'],
+                              'og:image:alt': ['GitHub is where over 100 '
+                                               'million developers shape the '
+                                               'future of software, together. '
+                                               'Contribute to the open source '
+                                               'community, manage your Git '
+                                               'repositories, review code like '
+                                               'a pro, track bugs and fea...'],
+                              'og:image:height': ['630'],
+                              'og:image:type': ['image/png'],
+                              'og:image:width': ['1200'],
+                              'og:site_name': ['GitHub'],
+                              'og:title': ['GitHub: Let’s build from here'],
+                              'og:type': ['object'],
+                              'og:url': ['https://github.com/'],
+                              'page-subject': ['GitHub'],
+                              'request-id': ['FF24:4189:2159F9C:32AFA8C:6424215D'],
+                              'route-pattern': ['/'],
+                              'theme-color': ['#1e2327'],
+                              'turbo-body-classes': ['logged-out '
+                                                     'env-production '
+                                                     'page-responsive '
+                                                     'header-overlay '
+                                                     'home-campaign'],
+                              'turbo-cache-control': ['no-preview'],
+                              'twitter:card': ['summary_large_image'],
+                              'twitter:description': ['GitHub is where over '
+                                                      '100 million developers '
+                                                      'shape the future of '
+                                                      'software, together. '
+                                                      'Contribute to the open '
+                                                      'source community, '
+                                                      'manage your Git '
+                                                      'repositories, review '
+                                                      'code like a pro, track '
+                                                      'bugs and fea...'],
+                              'twitter:image:src': ['https://github.githubassets.com/images/modules/site/social-cards/campaign-social.png'],
+                              'twitter:site': ['@github'],
+                              'twitter:title': ['GitHub: Let’s build from '
+                                                'here'],
+                              'viewport': ['width=device-width'],
+                              'visitor-hmac': ['40f7f8e70f08c8827d071b05cad87ba0f4d65d9e05b9ebae2c5745fa50866e24'],
+                              'visitor-payload': ['eyJyZWZlcnJlciI6Imh0dHA6Ly9naXRodWIuY29tIiwicmVxdWVzdF9pZCI6IkZGMjQ6NDE4OToyMTU5RjlDOjMyQUZBOEM6NjQyNDIxNUQiLCJ2aXNpdG9yX2lkIjoiNjkxMjEyODE1OTQ4NjA1ODg0NSIsInJlZ2lvbl9lZGdlIjoiaWFkIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9']},
+                'last_analysis_date': 1680089435,
+                'last_analysis_results': {'0xSI_f33d': {'category': 'undetected',
+                                                        'engine_name': '0xSI_f33d',
+                                                        'method': 'blacklist',
+                                                        'result': 'unrated'},
+                                          'ADMINUSLabs': {'category': 'harmless',
+                                                          'engine_name': 'ADMINUSLabs',
+                                                          'method': 'blacklist',
+                                                          'result': 'clean'},
+                                          'AICC (MONITORAPP)': {'category': 'harmless',
+                                                                'engine_name': 'AICC '
+                                                                               '(MONITORAPP)',
+                                                                'method': 'blacklist',
+                                                                'result': 'clean'},
+                                          'Abusix': {'category': 'harmless',
+                                                     'engine_name': 'Abusix',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'Acronis': {'category': 'harmless',
+                                                      'engine_name': 'Acronis',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'AlienVault': {'category': 'harmless',
+                                                         'engine_name': 'AlienVault',
+                                                         'method': 'blacklist',
+                                                         'result': 'clean'},
+                                          'Antiy-AVL': {'category': 'harmless',
+                                                        'engine_name': 'Antiy-AVL',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'ArcSight Threat Intelligence': {'category': 'undetected',
+                                                                           'engine_name': 'ArcSight '
+                                                                                          'Threat '
+                                                                                          'Intelligence',
+                                                                           'method': 'blacklist',
+                                                                           'result': 'unrated'},
+                                          'Artists Against 419': {'category': 'harmless',
+                                                                  'engine_name': 'Artists '
+                                                                                 'Against '
+                                                                                 '419',
+                                                                  'method': 'blacklist',
+                                                                  'result': 'clean'},
+                                          'AutoShun': {'category': 'undetected',
+                                                       'engine_name': 'AutoShun',
+                                                       'method': 'blacklist',
+                                                       'result': 'unrated'},
+                                          'Avira': {'category': 'harmless',
+                                                    'engine_name': 'Avira',
+                                                    'method': 'blacklist',
+                                                    'result': 'clean'},
+                                          'Bfore.Ai PreCrime': {'category': 'harmless',
+                                                                'engine_name': 'Bfore.Ai '
+                                                                               'PreCrime',
+                                                                'method': 'blacklist',
+                                                                'result': 'clean'},
+                                          'BitDefender': {'category': 'harmless',
+                                                          'engine_name': 'BitDefender',
+                                                          'method': 'blacklist',
+                                                          'result': 'clean'},
+                                          'Bkav': {'category': 'undetected',
+                                                   'engine_name': 'Bkav',
+                                                   'method': 'blacklist',
+                                                   'result': 'unrated'},
+                                          'BlockList': {'category': 'harmless',
+                                                        'engine_name': 'BlockList',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'Blueliv': {'category': 'harmless',
+                                                      'engine_name': 'Blueliv',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'CINS Army': {'category': 'harmless',
+                                                        'engine_name': 'CINS '
+                                                                       'Army',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'CMC Threat Intelligence': {'category': 'harmless',
+                                                                      'engine_name': 'CMC '
+                                                                                     'Threat '
+                                                                                     'Intelligence',
+                                                                      'method': 'blacklist',
+                                                                      'result': 'clean'},
+                                          'CRDF': {'category': 'harmless',
+                                                   'engine_name': 'CRDF',
+                                                   'method': 'blacklist',
+                                                   'result': 'clean'},
+                                          'Certego': {'category': 'harmless',
+                                                      'engine_name': 'Certego',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'Chong Lua Dao': {'category': 'harmless',
+                                                            'engine_name': 'Chong '
+                                                                           'Lua '
+                                                                           'Dao',
+                                                            'method': 'blacklist',
+                                                            'result': 'clean'},
+                                          'Cluster25': {'category': 'undetected',
+                                                        'engine_name': 'Cluster25',
+                                                        'method': 'blacklist',
+                                                        'result': 'unrated'},
+                                          'Criminal IP': {'category': 'undetected',
+                                                          'engine_name': 'Criminal '
+                                                                         'IP',
+                                                          'method': 'blacklist',
+                                                          'result': 'unrated'},
+                                          'CrowdSec': {'category': 'undetected',
+                                                       'engine_name': 'CrowdSec',
+                                                       'method': 'blacklist',
+                                                       'result': 'unrated'},
+                                          'CyRadar': {'category': 'harmless',
+                                                      'engine_name': 'CyRadar',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'Cyan': {'category': 'undetected',
+                                                   'engine_name': 'Cyan',
+                                                   'method': 'blacklist',
+                                                   'result': 'unrated'},
+                                          'Cyble': {'category': 'harmless',
+                                                    'engine_name': 'Cyble',
+                                                    'method': 'blacklist',
+                                                    'result': 'clean'},
+                                          'DNS8': {'category': 'harmless',
+                                                   'engine_name': 'DNS8',
+                                                   'method': 'blacklist',
+                                                   'result': 'clean'},
+                                          'Dr.Web': {'category': 'harmless',
+                                                     'engine_name': 'Dr.Web',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'ESET': {'category': 'harmless',
+                                                   'engine_name': 'ESET',
+                                                   'method': 'blacklist',
+                                                   'result': 'clean'},
+                                          'ESTsecurity': {'category': 'harmless',
+                                                          'engine_name': 'ESTsecurity',
+                                                          'method': 'blacklist',
+                                                          'result': 'clean'},
+                                          'EmergingThreats': {'category': 'harmless',
+                                                              'engine_name': 'EmergingThreats',
+                                                              'method': 'blacklist',
+                                                              'result': 'clean'},
+                                          'Emsisoft': {'category': 'harmless',
+                                                       'engine_name': 'Emsisoft',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'Feodo Tracker': {'category': 'harmless',
+                                                            'engine_name': 'Feodo '
+                                                                           'Tracker',
+                                                            'method': 'blacklist',
+                                                            'result': 'clean'},
+                                          'Forcepoint ThreatSeeker': {'category': 'harmless',
+                                                                      'engine_name': 'Forcepoint '
+                                                                                     'ThreatSeeker',
+                                                                      'method': 'blacklist',
+                                                                      'result': 'clean'},
+                                          'Fortinet': {'category': 'harmless',
+                                                       'engine_name': 'Fortinet',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'G-Data': {'category': 'harmless',
+                                                     'engine_name': 'G-Data',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'Google Safebrowsing': {'category': 'harmless',
+                                                                  'engine_name': 'Google '
+                                                                                 'Safebrowsing',
+                                                                  'method': 'blacklist',
+                                                                  'result': 'clean'},
+                                          'GreenSnow': {'category': 'harmless',
+                                                        'engine_name': 'GreenSnow',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'Heimdal Security': {'category': 'harmless',
+                                                               'engine_name': 'Heimdal '
+                                                                              'Security',
+                                                               'method': 'blacklist',
+                                                               'result': 'clean'},
+                                          'IPsum': {'category': 'harmless',
+                                                    'engine_name': 'IPsum',
+                                                    'method': 'blacklist',
+                                                    'result': 'clean'},
+                                          'Juniper Networks': {'category': 'harmless',
+                                                               'engine_name': 'Juniper '
+                                                                              'Networks',
+                                                               'method': 'blacklist',
+                                                               'result': 'clean'},
+                                          'K7AntiVirus': {'category': 'harmless',
+                                                          'engine_name': 'K7AntiVirus',
+                                                          'method': 'blacklist',
+                                                          'result': 'clean'},
+                                          'Kaspersky': {'category': 'harmless',
+                                                        'engine_name': 'Kaspersky',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'Lionic': {'category': 'harmless',
+                                                     'engine_name': 'Lionic',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'Lumu': {'category': 'malicious',
+                                                   'engine_name': 'Lumu',
+                                                   'method': 'blacklist',
+                                                   'result': 'malware'},
+                                          'MalwarePatrol': {'category': 'harmless',
+                                                            'engine_name': 'MalwarePatrol',
+                                                            'method': 'blacklist',
+                                                            'result': 'clean'},
+                                          'Malwared': {'category': 'harmless',
+                                                       'engine_name': 'Malwared',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'Netcraft': {'category': 'undetected',
+                                                       'engine_name': 'Netcraft',
+                                                       'method': 'blacklist',
+                                                       'result': 'unrated'},
+                                          'OpenPhish': {'category': 'harmless',
+                                                        'engine_name': 'OpenPhish',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'PREBYTES': {'category': 'harmless',
+                                                       'engine_name': 'PREBYTES',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'PhishFort': {'category': 'harmless',
+                                                        'engine_name': 'PhishFort',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'PhishLabs': {'category': 'undetected',
+                                                        'engine_name': 'PhishLabs',
+                                                        'method': 'blacklist',
+                                                        'result': 'unrated'},
+                                          'Phishing Database': {'category': 'harmless',
+                                                                'engine_name': 'Phishing '
+                                                                               'Database',
+                                                                'method': 'blacklist',
+                                                                'result': 'clean'},
+                                          'Phishtank': {'category': 'harmless',
+                                                        'engine_name': 'Phishtank',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'PrecisionSec': {'category': 'undetected',
+                                                           'engine_name': 'PrecisionSec',
+                                                           'method': 'blacklist',
+                                                           'result': 'unrated'},
+                                          'Quick Heal': {'category': 'harmless',
+                                                         'engine_name': 'Quick '
+                                                                        'Heal',
+                                                         'method': 'blacklist',
+                                                         'result': 'clean'},
+                                          'Quttera': {'category': 'harmless',
+                                                      'engine_name': 'Quttera',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'Rising': {'category': 'harmless',
+                                                     'engine_name': 'Rising',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'SCUMWARE.org': {'category': 'harmless',
+                                                           'engine_name': 'SCUMWARE.org',
+                                                           'method': 'blacklist',
+                                                           'result': 'clean'},
+                                          'SafeToOpen': {'category': 'undetected',
+                                                         'engine_name': 'SafeToOpen',
+                                                         'method': 'blacklist',
+                                                         'result': 'unrated'},
+                                          'Sangfor': {'category': 'harmless',
+                                                      'engine_name': 'Sangfor',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'Scantitan': {'category': 'harmless',
+                                                        'engine_name': 'Scantitan',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'Seclookup': {'category': 'harmless',
+                                                        'engine_name': 'Seclookup',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'SecureBrain': {'category': 'harmless',
+                                                          'engine_name': 'SecureBrain',
+                                                          'method': 'blacklist',
+                                                          'result': 'clean'},
+                                          'Snort IP sample list': {'category': 'harmless',
+                                                                   'engine_name': 'Snort '
+                                                                                  'IP '
+                                                                                  'sample '
+                                                                                  'list',
+                                                                   'method': 'blacklist',
+                                                                   'result': 'clean'},
+                                          'Sophos': {'category': 'harmless',
+                                                     'engine_name': 'Sophos',
+                                                     'method': 'blacklist',
+                                                     'result': 'clean'},
+                                          'Spam404': {'category': 'harmless',
+                                                      'engine_name': 'Spam404',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'StopForumSpam': {'category': 'harmless',
+                                                            'engine_name': 'StopForumSpam',
+                                                            'method': 'blacklist',
+                                                            'result': 'clean'},
+                                          'Sucuri SiteCheck': {'category': 'harmless',
+                                                               'engine_name': 'Sucuri '
+                                                                              'SiteCheck',
+                                                               'method': 'blacklist',
+                                                               'result': 'clean'},
+                                          'ThreatHive': {'category': 'harmless',
+                                                         'engine_name': 'ThreatHive',
+                                                         'method': 'blacklist',
+                                                         'result': 'clean'},
+                                          'Threatsourcing': {'category': 'harmless',
+                                                             'engine_name': 'Threatsourcing',
+                                                             'method': 'blacklist',
+                                                             'result': 'clean'},
+                                          'Trustwave': {'category': 'harmless',
+                                                        'engine_name': 'Trustwave',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'URLQuery': {'category': 'harmless',
+                                                       'engine_name': 'URLQuery',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'URLhaus': {'category': 'harmless',
+                                                      'engine_name': 'URLhaus',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'VIPRE': {'category': 'undetected',
+                                                    'engine_name': 'VIPRE',
+                                                    'method': 'blacklist',
+                                                    'result': 'unrated'},
+                                          'VX Vault': {'category': 'harmless',
+                                                       'engine_name': 'VX '
+                                                                      'Vault',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'Viettel Threat Intelligence': {'category': 'harmless',
+                                                                          'engine_name': 'Viettel '
+                                                                                         'Threat '
+                                                                                         'Intelligence',
+                                                                          'method': 'blacklist',
+                                                                          'result': 'clean'},
+                                          'ViriBack': {'category': 'harmless',
+                                                       'engine_name': 'ViriBack',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'Webroot': {'category': 'harmless',
+                                                      'engine_name': 'Webroot',
+                                                      'method': 'blacklist',
+                                                      'result': 'clean'},
+                                          'Xcitium Verdict Cloud': {'category': 'undetected',
+                                                                    'engine_name': 'Xcitium '
+                                                                                   'Verdict '
+                                                                                   'Cloud',
+                                                                    'method': 'blacklist',
+                                                                    'result': 'unrated'},
+                                          'Yandex Safebrowsing': {'category': 'harmless',
+                                                                  'engine_name': 'Yandex '
+                                                                                 'Safebrowsing',
+                                                                  'method': 'blacklist',
+                                                                  'result': 'clean'},
+                                          'ZeroCERT': {'category': 'harmless',
+                                                       'engine_name': 'ZeroCERT',
+                                                       'method': 'blacklist',
+                                                       'result': 'clean'},
+                                          'alphaMountain.ai': {'category': 'harmless',
+                                                               'engine_name': 'alphaMountain.ai',
+                                                               'method': 'blacklist',
+                                                               'result': 'clean'},
+                                          'benkow.cc': {'category': 'harmless',
+                                                        'engine_name': 'benkow.cc',
+                                                        'method': 'blacklist',
+                                                        'result': 'clean'},
+                                          'desenmascara.me': {'category': 'harmless',
+                                                              'engine_name': 'desenmascara.me',
+                                                              'method': 'blacklist',
+                                                              'result': 'clean'},
+                                          'malwares.com URL checker': {'category': 'harmless',
+                                                                       'engine_name': 'malwares.com '
+                                                                                      'URL '
+                                                                                      'checker',
+                                                                       'method': 'blacklist',
+                                                                       'result': 'clean'},
+                                          'securolytics': {'category': 'harmless',
+                                                           'engine_name': 'securolytics',
+                                                           'method': 'blacklist',
+                                                           'result': 'clean'}},
+                'last_analysis_stats': {'harmless': 73,
+                                        'malicious': 1,
+                                        'suspicious': 0,
+                                        'timeout': 0,
+                                        'undetected': 14},
+                'last_final_url': 'https://github.com/',
+                'last_http_response_code': 200,
+                'last_http_response_content_length': 225206,
+                'last_http_response_content_sha256': 'c915df57a2af3fe9f4bbf638339fe66e1d4b707065d92a7a82c538b61e0d9bf7',
+                'last_http_response_headers': {'Accept-Ranges': 'bytes',
+                                               'Cache-Control': 'max-age=0, '
+                                                                'private, '
+                                                                'must-revalidate',
+                                               'Content-Encoding': 'gzip',
+                                               'Content-Security-Policy': 'default-src '
+                                                                          "'none'; "
+                                                                          'base-uri '
+                                                                          "'self'; "
+                                                                          'block-all-mixed-content; '
+                                                                          'child-src '
+                                                                          'github.com/assets-cdn/worker/ '
+                                                                          'gist.github.com/assets-cdn/worker/; '
+                                                                          'connect-src '
+                                                                          "'self' "
+                                                                          'uploads.github.com '
+                                                                          'objects-origin.githubusercontent.com '
+                                                                          'www.githubstatus.com '
+                                                                          'collector.github.com '
+                                                                          'raw.githubusercontent.com '
+                                                                          'api.github.com '
+                                                                          'github-cloud.s3.amazonaws.com '
+                                                                          'github-production-repository-file-5c1aeb.s3.amazonaws.com '
+                                                                          'github-production-upload-manifest-file-7fdce7.s3.amazonaws.com '
+                                                                          'github-production-user-asset-6210df.s3.amazonaws.com '
+                                                                          'cdn.optimizely.com '
+                                                                          'logx.optimizely.com/v1/events '
+                                                                          '*.actions.githubusercontent.com '
+                                                                          'productionresultssa0.blob.core.windows.net/ '
+                                                                          'productionresultssa1.blob.core.windows.net/ '
+                                                                          'productionresultssa2.blob.core.windows.net/ '
+                                                                          'productionresultssa3.blob.core.windows.net/ '
+                                                                          'productionresultssa4.blob.core.windows.net/ '
+                                                                          'wss://*.actions.githubusercontent.com '
+                                                                          'online.visualstudio.com/api/v1/locations '
+                                                                          'github-production-repository-image-32fea6.s3.amazonaws.com '
+                                                                          'github-production-release-asset-2e65be.s3.amazonaws.com '
+                                                                          'insights.github.com '
+                                                                          'wss://alive.github.com '
+                                                                          'github.githubassets.com; '
+                                                                          'font-src '
+                                                                          'github.githubassets.com; '
+                                                                          'form-action '
+                                                                          "'self' "
+                                                                          'github.com '
+                                                                          'gist.github.com '
+                                                                          'objects-origin.githubusercontent.com; '
+                                                                          'frame-ancestors '
+                                                                          "'none'; "
+                                                                          'frame-src '
+                                                                          'viewscreen.githubusercontent.com '
+                                                                          'notebooks.githubusercontent.com; '
+                                                                          'img-src '
+                                                                          "'self' "
+                                                                          'data: '
+                                                                          'github.githubassets.com '
+                                                                          'media.githubusercontent.com '
+                                                                          'camo.githubusercontent.com '
+                                                                          'identicons.github.com '
+                                                                          'avatars.githubusercontent.com '
+                                                                          'github-cloud.s3.amazonaws.com '
+                                                                          'objects.githubusercontent.com '
+                                                                          'objects-origin.githubusercontent.com '
+                                                                          'secured-user-images.githubusercontent.com/ '
+                                                                          'user-images.githubusercontent.com/ '
+                                                                          'private-user-images.githubusercontent.com '
+                                                                          'opengraph.githubassets.com '
+                                                                          'github-production-user-asset-6210df.s3.amazonaws.com '
+                                                                          'customer-stories-feed.github.com '
+                                                                          'spotlights-feed.github.com '
+                                                                          '*.githubusercontent.com; '
+                                                                          'manifest-src '
+                                                                          "'self'; "
+                                                                          'media-src '
+                                                                          'github.com '
+                                                                          'user-images.githubusercontent.com/ '
+                                                                          'secured-user-images.githubusercontent.com/ '
+                                                                          'private-user-images.githubusercontent.com '
+                                                                          'github.githubassets.com; '
+                                                                          'script-src '
+                                                                          'github.githubassets.com; '
+                                                                          'style-src '
+                                                                          "'unsafe-inline' "
+                                                                          'github.githubassets.com; '
+                                                                          'worker-src '
+                                                                          'github.com/assets-cdn/worker/ '
+                                                                          'gist.github.com/assets-cdn/worker/',
+                                               'Content-Type': 'text/html; '
+                                                               'charset=utf-8',
+                                               'Date': 'Wed, 29 Mar 2023 '
+                                                       '11:30:31 GMT',
+                                               'ETag': 'W/"af72d180d0df7523aec8c5a66720d3c2"',
+                                               'Referrer-Policy': 'origin-when-cross-origin, '
+                                                                  'strict-origin-when-cross-origin',
+                                               'Server': 'GitHub.com',
+                                               'Strict-Transport-Security': 'max-age=31536000; '
+                                                                            'includeSubdomains; '
+                                                                            'preload',
+                                               'Transfer-Encoding': 'chunked',
+                                               'Vary': 'X-PJAX, '
+                                                       'X-PJAX-Container, '
+                                                       'Turbo-Visit, '
+                                                       'Turbo-Frame, '
+                                                       'Accept-Language, '
+                                                       'Accept-Encoding, '
+                                                       'Accept, '
+                                                       'X-Requested-With',
+                                               'X-Content-Type-Options': 'nosniff',
+                                               'X-Frame-Options': 'deny',
+                                               'X-GitHub-Request-Id': 'FF24:4189:2159F9C:32AFA8C:6424215D',
+                                               'X-XSS-Protection': '0',
+                                               'content-language': 'en-US'},
+                'last_modification_date': 1680089438,
+                'last_submission_date': 1680089435,
+                'outgoing_links': ['https://github.community',
+                                   'https://www.githubstatus.com/',
+                                   'https://www.youtube.com/github',
+                                   'https://twitter.com/github',
+                                   'https://www.linkedin.com/company/github',
+                                   'https://github.blog',
+                                   'https://www.facebook.com/GitHub',
+                                   'https://www.electronjs.org',
+                                   'https://www.tiktok.com/@github',
+                                   'https://www.twitch.tv/github'],
+                'redirection_chain': ['http://github.com/'],
+                'reputation': 131,
+                'tags': [],
+                'threat_names': [],
+                'times_submitted': 11066,
+                'title': 'GitHub: Let’s build from here · GitHub',
+                'tld': 'com',
+                'total_votes': {'harmless': 44, 'malicious': 13},
+                'trackers': {'Google Analytics': [{'id': 'UA-3769691-2',
+                                                   'timestamp': 1604930400,
+                                                   'url': '<meta '
+                                                          'name="google-analytics" '
+                                                          'content="UA-3769691-2"/>\n'
+                                                          '\n'
+                                                          '\n'}]},
+                'url': 'http://github.com/'},
+ 'id': '793a92a45980286190d8c4cb5e3a4d7846373fecde23e4d95f22bfdc98eec94c',
+ 'links': {'self': 'https://www.virustotal.com/api/v3/urls/793a92a45980286190d8c4cb5e3a4d7846373fecde23e4d95f22bfdc98eec94c'},
+ 'type': 'url'}
