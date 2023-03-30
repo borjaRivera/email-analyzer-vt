@@ -69,15 +69,21 @@ class EmailExtractor:
                     attachment['file'] = section.get_payload(decode=True)
                     #print("file: ", attachment['file']  )
 
-                    sha1 = hashlib.sha1(attachment["file"]).hexdigest()
-                    attachment['sha1'] = sha1
-                    #print("sha1: ", attachment['sha1']  )
-
                     hashmd5 = hashlib.md5(attachment["file"]).hexdigest()
                     attachment['hashmd5'] = hashmd5
                     #print("md5: ", attachment['hashmd5']  )
 
+                    sha1 = hashlib.sha1(attachment["file"]).hexdigest()
+                    attachment['sha1'] = sha1
+                    #print("sha1: ", attachment['sha1']  )
+
+                    sha256 = hashlib.sha256(attachment["file"]).hexdigest()
+                    attachment['sha256'] = sha256
+                    #print("sha256: ", attachment['sha256']  )
+
+                    
                     attachments.append(attachment)
+
             except:
                 pass
                 #print("File hash not found in VirusTotal")

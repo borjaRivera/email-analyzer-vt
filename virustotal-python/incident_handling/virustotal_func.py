@@ -13,6 +13,7 @@ class VirusTotalFunc:
 
 		return resp.data
 
+
 	def scan_url(url):
 		vtotal = Virustotal(API_KEY=API_KEY)
 		resp = vtotal.request("urls", data={"url": url}, method="POST")
@@ -23,3 +24,11 @@ class VirusTotalFunc:
 		report = vtotal.request(f"urls/{url_id}")
 
 		return report.data
+	
+
+	def scan_ip(ip):
+		vtotal = Virustotal(API_KEY=API_KEY)
+		# Get information about an IP address
+		resp = vtotal.request(f"ip_addresses/{ip}")
+
+		return resp.data

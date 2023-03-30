@@ -48,43 +48,44 @@ def output_console(frm, to, cc, subject, messageID, headers, ips,
 		for sbj in subject:
 			print("\t%s" % (sbj))
 
-	
-	print("[*] Headers:")
 	"""
+	print("[*] Headers:")
+	
 	for line in headers:
 		print("\t%s: %s" % (line[0], line[1]))
     """
+	
 	if len(ips) > 0:
 		print("\n[*] IP Addresses:")
-		if args.virustotal:
-			for ip in ips:
-				print(ip)
-		else:
-			for ip in ips:
-				print("\t%s" % (ip[0]))
-				if len(ip) > 1:
-					for i in ip[1]:
-						print("\t\t%s - %d/%d - %s" % (i['url'], i['positives'],
-							i['total'], i['scan_date']))
+		for ip in ips:
+			print("\t%s" % (ip))
+			EmailAnalyzer.analyze_ip(ip)
+			
+
 	
 	if len(links) > 0:
 		print("\n[*] Links:")
 		for link in links:
 			print("\t%s" % (link))
-
 			EmailAnalyzer.analyze_url(link)
 
 
 	if len(attachments) > 0:
 		print("\n[*] Attachments:")
 		for att in attachments:
+			
 			print("\tFile: %s" % (att["filename"]))
 			print("\tFile type: %s" % (att["type"]))
-			print("\tSHA1: %s" % (att['sha1']))
-			print("\tMD5: %s" % (att['hashmd5']))
 			
-			EmailAnalyzer.analyze_attachment(att['sha1'])
-				
+			print("\tMD5: %s" % (att['hashmd5']))
+			EmailAnalyzer.analyze_attachment(att['hashmd5'])
+			
+			print("\tSHA1: %s" % (att['sha1']))
+			EmailAnalyzer.analyze_attachment(att['sha1'])			
+
+			print("\tSHA256: %s" % (att['sha256']))
+			EmailAnalyzer.analyze_attachment(att['sha256'])
+			
 			print("\n")
 			
 

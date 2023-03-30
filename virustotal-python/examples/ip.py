@@ -16,31 +16,32 @@ Documentation:
 from virustotal_python import Virustotal
 from pprint import pprint
 
-API_KEY = "<VirusTotal API Key>"
+API_KEY = "a1e4a0a46cd1ea3c807598d68d85281e130af36bd5452ff917c46be7dd4e3b57"
 
 # (Google DNS)
-IP = "8.8.8.8"
+IP = "185.91.136.159"
 
 # v3 examples
 vtotal = Virustotal(API_KEY=API_KEY)
 
 # Get information about an IP address
 resp = vtotal.request(f"ip_addresses/{IP}")
+pprint(resp.json())
+
 # Get objects (relationships) related to an IP address
 # Get historical_whois relationship to the IP address
 resp = vtotal.request(f"ip_addresses/{IP}/historical_whois")
 # Get communicating_files related to the IP address with a limit of 5
 resp = vtotal.request(f"ip_addresses/{IP}/communicating_files", params={"limit": 5})
-
 # Get votes for an IP address
 resp = vtotal.request(f"ip_addresses/{IP}/votes")
 # Add a vote for an IP address
 # Verdict can be either harmless or malicious
 vote = {"data": {"type": "vote", "attributes": {"verdict": "harmless"}}}
-resp = vtotal.request(f"ip_addresses/{IP}/votes", json=vote, method="POST")
+#resp = vtotal.request(f"ip_addresses/{IP}/votes", json=vote, method="POST")
 
 # v2 examples
 vtotal = Virustotal(API_KEY=API_KEY, API_VERSION=2)
 # Get information about an IP address
 resp = vtotal.request("ip-address/report", params={"ip": IP})
-pprint(resp.json())
+
