@@ -139,6 +139,7 @@ def main():
 
 	if args.file:
 		try:
+			print("\n[ANALYZING FILE]", args.file[0])
 			email_message = email.message_from_string(open(args.file[0]).read())
 			analyze(email_message)
 
