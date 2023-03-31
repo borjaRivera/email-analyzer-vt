@@ -41,10 +41,11 @@ class EmailExtractor:
         return body
 
 
-    def get_links(body):
+    def get_links(email_message):
+        #print(body)
         links = []
-        regex = re.compile(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:]+')
-        linksaux = regex.findall(body)
+        regex = re.compile(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:\#]+')
+        linksaux = regex.findall(str(email_message))
         for link in linksaux:
             if link.find(' ') == -1 and link.find('\t') == -1:
                 links.append(link)

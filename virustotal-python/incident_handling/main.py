@@ -60,7 +60,7 @@ def output_console(frm, to, cc, subject, messageID, headers, ips,
 		for ip in ips:
 			print("\t%s" % (ip))
 			EmailAnalyzer.analyze_ip(ip)
-			
+	
 
 	
 	if len(links) > 0:
@@ -113,7 +113,7 @@ def main():
 	messageID = email_message.get_all('message-ID', [])
 	headers = email_message.items()
 	ips = EmailExtractor.get_ip_addresses(email_message)
-	links = EmailExtractor.get_links(EmailExtractor.get_body(email_message))
+	links = EmailExtractor.get_links(email_message)
 	attachments = EmailExtractor.get_attachments(email_message)
 
 	output_console(	frm, 

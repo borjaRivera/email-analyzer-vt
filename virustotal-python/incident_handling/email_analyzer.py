@@ -22,11 +22,23 @@ class EmailAnalyzer:
 									timeout,"timeout,",
 									harmless,"harmless")
 			
-			last_analysis_date = datetime.datetime.fromtimestamp(response['attributes']['last_analysis_date'])
-			print("\t\t\t[*] Last analysis date: ", last_analysis_date)
+			try:
+				last_analysis_date = datetime.datetime.fromtimestamp(response['attributes']['last_analysis_date'])
+				print("\t\t\t[*] Last analysis date: ", last_analysis_date)
+			except:
+				pass
+
+			try:
+				last_modification_date = datetime.datetime.fromtimestamp(response['attributes']['last_modification_date'])
+				print("\t\t\t[*] Last modification date: ", last_modification_date)
+			except:
+				pass
 			
-			first_submission_date = datetime.datetime.fromtimestamp(response['attributes']['first_submission_date'])
-			print("\t\t\t[*] First submission date: ", first_submission_date)
+			try:
+				first_submission_date = datetime.datetime.fromtimestamp(response['attributes']['first_submission_date'])
+				print("\t\t\t[*] First submission date: ", first_submission_date)
+			except: 
+				pass
 
 
 	def get_basic_analysis_ip(response):
@@ -44,13 +56,26 @@ class EmailAnalyzer:
 								timeout,"timeout,",
 								harmless,"harmless")
 		
-		last_analysis_date = datetime.datetime.fromtimestamp(response['attributes']['last_analysis_date'])
-		print("\t\t\t[*] Last analysis date: ", last_analysis_date)
+		try:
+			last_analysis_date = datetime.datetime.fromtimestamp(response['attributes']['last_analysis_date'])
+			print("\t\t\t[*] Last analysis date: ", last_analysis_date)
+		except:
+			pass
+
+		try:
+			last_modification_date = datetime.datetime.fromtimestamp(response['attributes']['last_modification_date'])
+			print("\t\t\t[*] Last modification date: ", last_modification_date)
+		except:
+			pass
 		
-		continent =  response['attributes']['continent'] 
-		country = response['attributes']['country']
-		print("\t\t\t[*] Continent: ", continent)
-		print("\t\t\t[*] Country: ", country)
+		try:
+			continent =  response['attributes']['continent'] 
+			country = response['attributes']['country']
+			print("\t\t\t[*] Continent: ", continent)
+			print("\t\t\t[*] Country: ", country)
+		except:
+			pass
+
 
 
 	def analyze_attachment(hash_to_analyze):

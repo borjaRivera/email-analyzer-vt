@@ -3,7 +3,6 @@ from virustotal_python import Virustotal
 
 API_KEY = "a1e4a0a46cd1ea3c807598d68d85281e130af36bd5452ff917c46be7dd4e3b57"
 
-"""FUNCTIONALITIES"""
 
 class VirusTotalFunc:
 
