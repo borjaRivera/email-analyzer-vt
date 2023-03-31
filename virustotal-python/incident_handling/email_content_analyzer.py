@@ -4,7 +4,7 @@ from virustotal_func import VirusTotalFunc
 
 from pprint import pprint
 
-class EmailAnalyzer:
+class EmailContentAnalyzer:
 
 	def get_basic_analysis(response):
 			
@@ -82,7 +82,7 @@ class EmailAnalyzer:
 		try:
 			response = VirusTotalFunc.get_file_info(hash_to_analyze)
 
-			EmailAnalyzer.get_basic_analysis(response)
+			EmailContentAnalyzer.get_basic_analysis(response)
 
 		except Exception as e:
 			print("\t\t[*] VT: File hash not found in VirusTotal")
@@ -92,7 +92,7 @@ class EmailAnalyzer:
 		try:
 			response = VirusTotalFunc.scan_url(url_to_analyze)
 
-			EmailAnalyzer.get_basic_analysis(response)
+			EmailContentAnalyzer.get_basic_analysis(response)
 
 		except Exception as e:
 			print("\t\t\tNot found in VirusTotal")
@@ -102,7 +102,7 @@ class EmailAnalyzer:
 		try:
 			response = VirusTotalFunc.scan_ip(ip_to_analyze)
 
-			EmailAnalyzer.get_basic_analysis_ip(response)
+			EmailContentAnalyzer.get_basic_analysis_ip(response)
 
 		except Exception as e:
 			print("\t\t\tNot found in VirusTotal", e)

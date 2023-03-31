@@ -2,7 +2,7 @@ import hashlib
 import re
 
 
-class EmailExtractor:
+class EmailContentExtractor:
 
 
     def unique(seq):
@@ -18,14 +18,14 @@ class EmailExtractor:
             if ip:
                 ip=ip.group()
                 ip_addresses.append(ip)
-        return EmailExtractor.unique(ip_addresses)
+        return EmailContentExtractor.unique(ip_addresses)
 
 
     def recursive(payload):
         for i in payload:
             if i.get_content_maintype() == "multipart":
                 mail = i.get_payload()
-                body = EmailExtractor.recursive(mail)
+                body = EmailContentExtractor.recursive(mail)
                 return body
             elif i.get_content_maintype()  == "text":
                 return i.get_payload()
@@ -35,7 +35,7 @@ class EmailExtractor:
         maintype = email_message.get_content_maintype()
         payload = email_message.get_payload()
         if maintype == "multipart":
-            body = EmailExtractor.recursive(payload)
+            body = EmailContentExtractor.recursive(payload)
         elif maintype == "text":
             body = email_message.get_payload()
         return body
@@ -50,7 +50,7 @@ class EmailExtractor:
             if link.find(' ') == -1 and link.find('\t') == -1:
                 links.append(link)
 
-        return EmailExtractor.unique(links)
+        return EmailContentExtractor.unique(links)
 
 
     def get_attachments(email_message):
