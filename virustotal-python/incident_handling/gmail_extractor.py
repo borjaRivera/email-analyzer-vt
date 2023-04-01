@@ -34,9 +34,14 @@ class GmailExtractor:
         # Log in using your credentials
         mail_connection.login(credentials[0], credentials[1])
 
-    def saveEmailToFile(msg, outfile_name):
+    def save_email_to_file(msg, outfile_name):
         path = os.getcwd() + "/tmp"
-        outfile= os.path.join(path, outfile_name)
+
+        if not os.path.exists(path): 
+            os.makedirs(path)
+
+            
+        outfile = os.path.join(path, outfile_name)
         with open(outfile, 'w') as out:
             gen = generator.Generator(out)
             gen.flatten(msg)
@@ -53,6 +58,7 @@ class GmailExtractor:
         mail_id_list = data[0].split()  #IDs of all emails that we want to fetch 
 
         msgs = [] # empty list to capture all messages
+
         #Iterate through messages and extract data into the msgs list
         for num in mail_id_list:
             typ, data = my_mail.fetch(num, '(RFC822)') #RFC822 returns whole message (BODY fetches just body)
@@ -78,9 +84,39 @@ class GmailExtractor:
         return msgs
 
 
+    def extract(key, value):
+        contador = 0
+
+        try:
+            my_mail_connection = GmailExtractor.connect()
+        except Exception as e:
+            print("Failed connecting to email", e)
+
+        try:
+            GmailExtractor.login(my_mail_connection)
+        except Exception as e:
+            print("Failed login to email account", e)
+
+        #Define Key and Value for email search
+        #For other keys (criteria): https://gist.github.com/martinrusev/6121028#file-imap-search
+
+        if key == "ALL":
+            msgs = GmailExtractor.search_all(my_mail_connection, "ALL")
+
+        elif key == "FROM":
+            msgs = GmailExtractor.search_all_emails_by_sender(my_mail_connection, "FROM", value)
+
+        for msg in msgs[::-1]:
+            for response_part in msg:
+                if type(response_part) is tuple:
+                    my_msg=email.message_from_bytes((response_part[1]))
+
+                    contador = contador + 1 
+                    name = "email_" + str(contador) + ".eml"
+                    GmailExtractor.save_email_to_file(my_msg, name)
 
 
-
+""""
 def main():
     contador = 0
 
@@ -103,7 +139,9 @@ def main():
                 #print(my_msg)
                 contador = contador + 1 
                 name = "email_" + str(contador) + ".eml"
-                GmailExtractor.saveEmailToFile(my_msg, name)
+                GmailExtractor.save_email_to_file(my_msg, name)
 
 if __name__ == '__main__':
 	main()
+
+"""

@@ -1,23 +1,25 @@
 import argparse
 import email
 from os import walk
+import sys
+import time
 
-from virustotal_func import VirusTotalFunc
+from gmail_extractor import GmailExtractor
+
 from email_content_extractor import EmailContentExtractor
 from email_content_analyzer import EmailContentAnalyzer
 
 def init():
     
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-p", "--path", nargs=1, metavar='path',
-		help="Get all files in the path and analyze them.")
-	parser.add_argument("-f", "--file", nargs=1, metavar='filename',
-		help="File to process.")
-	parser.add_argument("-o", "--output", nargs=1,
-		help="Output.")
-	parser.add_argument("-vt", "--virustotal", action='store_true',
-		help="Skip virustotal chekings.")
+
+	parser.add_argument("-p", "--path", nargs=1, metavar='path', help="Get all files in the path and analyze them.")
+	parser.add_argument("-f", "--file", nargs=1, metavar='filename', help="File to process.")
+	parser.add_argument("-o", "--output", nargs=1, help="Output.")
+	parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
+
 	args = parser.parse_args()
+
 	return args
 
 def print_receivers(to, cc):
@@ -108,6 +110,7 @@ def output_console(frm, to, cc, subject, messageID, headers, ips,
 	print_links(links)
 	
 	print_attachments(attachments)
+
 	
 def analyze(email_message):
 	frm = email_message.get_all('from', [])
@@ -119,6 +122,7 @@ def analyze(email_message):
 	ips = EmailContentExtractor.get_ip_addresses(email_message)
 	links = EmailContentExtractor.get_links(email_message)
 	attachments = EmailContentExtractor.get_attachments(email_message)
+
 
 	output_console(	frm, 
 					to, 
@@ -139,7 +143,7 @@ def main():
 
 	if args.file:
 		try:
-			print("\n[ANALYZING FILE]", args.file[0])
+			print("\n\n[ANALYZING FILE]", args.file[0])
 			email_message = email.message_from_string(open(args.file[0]).read())
 			analyze(email_message)
 
@@ -149,13 +153,16 @@ def main():
 
 	elif args.path:
 		try:
+			GmailExtractor.extract("ALL", "")
 
+			time.sleep(2)
+			
 			files_in_directory = next(walk(args.path[0]), (None, None, []))[2]
 
 			#print(files_in_directory)
 
 			for file in files_in_directory:
-				print("\n[ANALYZING FILE]", file)
+				print("\n\n[ANALYZING FILE]", file)
 				try:
 					email_message = email.message_from_string(open(args.path[0] + "/" + file).read())
 					analyze(email_message)
@@ -166,9 +173,6 @@ def main():
 				
 		except:
 			pass
-	else:
-		print("ERROR: You must use the option -f.")
-		quit()
 
 	
 

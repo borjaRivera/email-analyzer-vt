@@ -13,13 +13,25 @@ class EmailContentExtractor:
 
     def get_ip_addresses(email_message):
         ip_addresses = []
+
+        # get IPs from headers
         for header in email_message.items():
             ip = re.search(r'((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}((2[0-5]|1[0-9]|[0-9])?[0-9])', header[1], re.I)
             if ip:
                 ip=ip.group()
                 ip_addresses.append(ip)
-        return EmailContentExtractor.unique(ip_addresses)
 
+        #get IPs from text body
+        text_body = str(email_message.get_payload()[0]).split()
+
+        for line in text_body:
+            ip = re.search(r'((2[0-5]|1[0-9]|[0-9])?[0-9]\.){3}((2[0-5]|1[0-9]|[0-9])?[0-9])', line, re.I)
+            if ip:
+                ip=ip.group()
+                ip_addresses.append(ip)
+
+        return EmailContentExtractor.unique(ip_addresses)
+    
 
     def recursive(payload):
         for i in payload:
@@ -44,11 +56,17 @@ class EmailContentExtractor:
     def get_links(email_message):
         #print(body)
         links = []
-        regex = re.compile(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:\#]+')
-        linksaux = regex.findall(str(email_message))
-        for link in linksaux:
-            if link.find(' ') == -1 and link.find('\t') == -1:
+
+        splitted_links = str(email_message.get_payload()[0]).split()
+
+        for link in splitted_links:
+            print(link)
+            link = re.search(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:\#]+', link, re.I)
+            if link:
+                link=link.group()
                 links.append(link)
+
+        print("LINKS:", links)
 
         return EmailContentExtractor.unique(links)
 
