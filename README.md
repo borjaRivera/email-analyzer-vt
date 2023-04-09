@@ -26,7 +26,7 @@ In that Gmail account that you want to scan, you must enable two-step verificati
 
 
 ## Usage
-Further usage examples can be found in [examples](examples).
+
 ```bash
 
 usage: main.py [-h] [-a] [-e filename] [-s address]
