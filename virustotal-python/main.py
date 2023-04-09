@@ -2,13 +2,12 @@ import argparse
 import email
 from os import walk
 import os
-import sys
 import time
 
-from gmail_extractor import GmailExtractor
+from incident_handling.gmail_extractor import GmailExtractor
 
-from email_content_extractor import EmailContentExtractor
-from email_content_analyzer import EmailContentAnalyzer
+from incident_handling.email_content_extractor import EmailContentExtractor
+from incident_handling.email_content_analyzer import EmailContentAnalyzer
 
 def init():
     

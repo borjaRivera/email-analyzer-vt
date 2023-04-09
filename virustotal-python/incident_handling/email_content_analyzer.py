@@ -1,7 +1,7 @@
 import base64
 from contextlib import suppress
 import datetime
-from virustotal_func import VirusTotalFunc
+from incident_handling.virustotal_func import VirusTotalFunc
 
 
 class EmailContentAnalyzer:

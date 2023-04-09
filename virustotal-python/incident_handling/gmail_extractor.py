@@ -8,7 +8,7 @@ class GmailExtractor:
 
 
     def get_credentials():
-        with open("config.yml") as f:
+        with open("../config.yml") as f:
             content = f.read()
             
         # from credentials.yml import user name and password
