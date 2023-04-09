@@ -2,7 +2,7 @@ from base64 import urlsafe_b64encode
 from virustotal_python import Virustotal
 import yaml
 
-with open("../config.yml") as f:
+with open("config.yml") as f:
 	content = f.read()
 	
 # from credentials.yml import user name and password
