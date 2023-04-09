@@ -16,7 +16,7 @@ git clone https://github.com/borjaRivera/email-analyzer-vt.git
 
 
 ## Getting Started
-Configure config.yml adding the Gmail address to be analyzed, password and your Virustotal API Key
+Configure config.yml adding the Gmail address to be analyzed, Application Password and your Virustotal API Key.
 
 ### Get a VirusTotal API Key 🔑
 [Sign up](https://www.virustotal.com/gui/join-us) for a VirusTotal account. Then, view your VirusTotal API key.
