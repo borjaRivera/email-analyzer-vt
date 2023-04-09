@@ -76,6 +76,12 @@ class EmailContentAnalyzer:
 		except:
 			pass
 
+		try:
+			as_owner = response['attributes']['as_owner'] 
+			print("\t\t\t[*] AS owner: ", as_owner)
+		except:
+			as_owner = "UNKNOWN"
+			print("\t\t\t[*] AS owner: ", as_owner)
 
 
 
