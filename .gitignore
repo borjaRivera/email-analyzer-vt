@@ -1,5 +1,6 @@
 # Ignore python cache files and directories
-__pychache__
+*.pyc
 
 # Ignore config.yml
 # config.yml
+

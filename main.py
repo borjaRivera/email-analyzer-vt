@@ -4,10 +4,10 @@ from os import walk
 import os
 import time
 
-from incident_handling.gmail_extractor import GmailExtractor
+from utils.gmail_extractor import GmailExtractor
 
-from incident_handling.email_content_extractor import EmailContentExtractor
-from incident_handling.email_content_analyzer import EmailContentAnalyzer
+from utils.email_content_extractor import EmailContentExtractor
+from utils.email_content_analyzer import EmailContentAnalyzer
 
 def init():
     
