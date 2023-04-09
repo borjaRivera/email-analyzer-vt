@@ -54,15 +54,19 @@ class EmailContentExtractor:
 
 
     def get_links(email_message):
-        #print(body)
+
         links = []
 
-        splitted_links = str(email_message.get_payload()[0]).split()
+        body = EmailContentExtractor.get_body(email_message)
+
+        splitted_links = str(body).split()
+
+        print(splitted_links)
 
         for link in splitted_links:
             
             # NOTE: review regex, some links does not match
-            link = re.search(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:\#]+', link, re.I)
+            link = re.search(r'^(?:(?:https?|ftp)://)?(?:www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/\S*)?$', link, re.I)
             if link:
                 link=link.group()
                 links.append(link)

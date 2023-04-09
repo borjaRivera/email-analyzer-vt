@@ -1,8 +1,8 @@
+import base64
 from contextlib import suppress
 import datetime
 from virustotal_func import VirusTotalFunc
 
-from pprint import pprint
 
 class EmailContentAnalyzer:
 
@@ -78,11 +78,16 @@ class EmailContentAnalyzer:
 
 
 
+
 	def analyze_attachment(hash_to_analyze):
 		try:
 			response = VirusTotalFunc.get_file_info(hash_to_analyze)
 
 			EmailContentAnalyzer.get_basic_analysis(response)
+
+			full_report_url = "https://www.virustotal.com/gui/file/" + hash_to_analyze + "\n"
+
+			print("\t\t\t[*] Full report: ", full_report_url)
 
 		except Exception as e:
 			print("\t\t[*] VT: File hash not found in VirusTotal")
@@ -94,6 +99,12 @@ class EmailContentAnalyzer:
 
 			EmailContentAnalyzer.get_basic_analysis(response)
 
+			url_id = base64.urlsafe_b64encode(url_to_analyze.encode()).decode().strip("=")
+
+			full_report_url = "https://www.virustotal.com/gui/url/" + url_id
+
+			print("\t\t\t[*] Full report: ", full_report_url)
+
 		except Exception as e:
 			print("\t\t\tNot found in VirusTotal")
 
@@ -103,6 +114,10 @@ class EmailContentAnalyzer:
 			response = VirusTotalFunc.scan_ip(ip_to_analyze)
 
 			EmailContentAnalyzer.get_basic_analysis_ip(response)
+
+			full_report_url = "https://www.virustotal.com/gui/ip-address/" + ip_to_analyze
+
+			print("\t\t\t[*] Full report: ", full_report_url)
 
 		except Exception as e:
 			print("\t\t\tNot found in VirusTotal", e)

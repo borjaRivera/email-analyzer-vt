@@ -82,11 +82,13 @@ def print_attachments(attachments):
 			print("\tFile: %s" % (att["filename"]))
 			print("\tFile type: %s" % (att["type"]))
 			
-			print("\tMD5: %s" % (att['hashmd5']))
-			EmailContentAnalyzer.analyze_attachment(att['hashmd5'])
+			# NOTE: Optional MD5
+			# print("\tMD5: %s" % (att['hashmd5']))
+			# EmailContentAnalyzer.analyze_attachment(att['hashmd5'])
 			
-			print("\tSHA1: %s" % (att['sha1']))
-			EmailContentAnalyzer.analyze_attachment(att['sha1'])			
+			# NOTE: Optional SHA1
+			# print("\tSHA1: %s" % (att['sha1']))
+			# EmailContentAnalyzer.analyze_attachment(att['sha1'])			
 
 			print("\tSHA256: %s" % (att['sha256']))
 			EmailContentAnalyzer.analyze_attachment(att['sha256'])

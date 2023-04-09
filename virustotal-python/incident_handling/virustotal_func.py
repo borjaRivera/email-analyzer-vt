@@ -1,7 +1,16 @@
 from base64 import urlsafe_b64encode
 from virustotal_python import Virustotal
+import yaml
 
-API_KEY = "a1e4a0a46cd1ea3c807598d68d85281e130af36bd5452ff917c46be7dd4e3b57"
+with open("config.yml") as f:
+	content = f.read()
+	
+# from credentials.yml import user name and password
+content_details = yaml.load(content, Loader=yaml.FullLoader)
+
+#Load the user name and passwd from yaml file
+API_KEY = content_details["VT_API_KEY"]
+
 
 
 class VirusTotalFunc:

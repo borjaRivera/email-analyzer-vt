@@ -1,0 +1,8 @@
+# config.yaml file
+
+# E-mail account credentials
+user: "honeypotmm2023@gmail.com"
+password: "kybdzmyeramyvhfs"
+
+# Virustotal API key
+VT_API_KEY: "a1e4a0a46cd1ea3c807598d68d85281e130af36bd5452ff917c46be7dd4e3b57"
