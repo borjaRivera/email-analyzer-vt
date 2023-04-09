@@ -1,6 +1,7 @@
 import argparse
 import email
 from os import walk
+import os
 import sys
 import time
 
@@ -13,10 +14,10 @@ def init():
     
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument("-p", "--path", nargs=1, metavar='path', help="Get all files in the path and analyze them.")
-	parser.add_argument("-f", "--file", nargs=1, metavar='filename', help="File to process.")
-	parser.add_argument("-o", "--output", nargs=1, help="Output.")
-	parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
+	parser.add_argument("-a", "--all", action='store_true', help="get all files from e-mail inbox account and analyze them.")
+	parser.add_argument("-f", "--file", nargs=1, metavar='filename', help="analyze a specific file from a path.")
+	#parser.add_argument("-o", "--output", nargs=1, metavar='output', help="utput.")
+	#parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
 
 	args = parser.parse_args()
 
@@ -151,20 +152,22 @@ def main():
 			print("There was an error opening the file %s: %s" % (args.file[0], e))
 			quit()
 
-	elif args.path:
+	elif args.all:
 		try:
+			print("\n\n[ANALYZING ALL FILES]")
+
 			GmailExtractor.extract("ALL", "")
 
 			time.sleep(2)
-			
-			files_in_directory = next(walk(args.path[0]), (None, None, []))[2]
 
-			#print(files_in_directory)
+			path = os.getcwd() + "/tmp"
+			
+			files_in_directory = next(walk(path), (None, None, []))[2]
 
 			for file in files_in_directory:
 				print("\n\n[ANALYZING FILE]", file)
 				try:
-					email_message = email.message_from_string(open(args.path[0] + "/" + file).read())
+					email_message = email.message_from_string(open(path + "/" + file).read())
 					analyze(email_message)
 
 				except Exception as e:

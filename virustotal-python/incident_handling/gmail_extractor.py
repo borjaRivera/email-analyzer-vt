@@ -100,6 +100,8 @@ class GmailExtractor:
         #Define Key and Value for email search
         #For other keys (criteria): https://gist.github.com/martinrusev/6121028#file-imap-search
 
+        print("Extracting emails from E-mail account")
+
         if key == "ALL":
             msgs = GmailExtractor.search_all(my_mail_connection, "ALL")
 

@@ -60,13 +60,14 @@ class EmailContentExtractor:
         splitted_links = str(email_message.get_payload()[0]).split()
 
         for link in splitted_links:
-            print(link)
+            
+            # NOTE: review regex, some links does not match
             link = re.search(r'http.+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!]+\.[0-9a-zA-Z\-\_\/\%\&\|\\\+\=\?\(\)\$\!\:\#]+', link, re.I)
             if link:
                 link=link.group()
                 links.append(link)
 
-        print("LINKS:", links)
+        #print("LINKS:", links)
 
         return EmailContentExtractor.unique(links)
 
