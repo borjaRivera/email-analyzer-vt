@@ -1,6 +1,7 @@
 from email import generator
 import imaplib
 import email
+import shutil
 import yaml
 import os
 
@@ -46,6 +47,14 @@ class GmailExtractor:
             gen = generator.Generator(out)
             gen.flatten(msg)
 
+    def delete_temporal_directory():
+        path = os.getcwd() + "/tmp"
+        try:
+            if os.path.exists(path):
+                shutil.rmtree(path)
+        except:
+            print("Failed removing temporal directory.")
+
 
     def search_all(my_mail, key):
         # Select the Inbox to fetch messages
@@ -67,12 +76,13 @@ class GmailExtractor:
         return msgs
     
     def search_all_emails_by_sender(my_mail, key, value):
+
         # Select the Inbox to fetch messages
         my_mail.select('Inbox')
 
         _, data = my_mail.search(None, key, value)  #Search for emails with specific key and value
 
-        mail_id_list = data[0].split()  #IDs of all emails that we want to fetch 
+        mail_id_list = data[0].split()  #IDs of all emails that we want to fetch
 
         msgs = [] # empty list to capture all messages
 
@@ -85,12 +95,14 @@ class GmailExtractor:
 
 
     def extract(key, value):
+        GmailExtractor.delete_temporal_directory()
+
         contador = 0
 
         try:
             my_mail_connection = GmailExtractor.connect()
         except Exception as e:
-            print("Failed connecting to email", e)
+            print("Failed connecting to email account", e)
 
         try:
             GmailExtractor.login(my_mail_connection)
@@ -100,7 +112,7 @@ class GmailExtractor:
         #Define Key and Value for email search
         #For other keys (criteria): https://gist.github.com/martinrusev/6121028#file-imap-search
 
-        print("Extracting emails from E-mail account")
+        #print("Extracting emails from E-mail account")
 
         if key == "ALL":
             msgs = GmailExtractor.search_all(my_mail_connection, "ALL")
@@ -118,32 +130,3 @@ class GmailExtractor:
                     GmailExtractor.save_email_to_file(my_msg, name)
 
 
-""""
-def main():
-    contador = 0
-
-    my_mail_connection = GmailExtractor.connect()
-
-    GmailExtractor.login(my_mail_connection)
-
-    #Define Key and Value for email search
-    #For other keys (criteria): https://gist.github.com/martinrusev/6121028#file-imap-search
-    # msgs = GmailExtractor.search_all_emails_by_sender(my_mail_connection, "FROM", "lb939300.cantabria@colaboradorbymovil.com")
-    msgs = GmailExtractor.search_all(my_mail_connection, "ALL")
-
-
-    for msg in msgs[::-1]:
-        for response_part in msg:
-            if type(response_part) is tuple:
-                my_msg=email.message_from_bytes((response_part[1]))
-
-                #print("_________________________________________")
-                #print(my_msg)
-                contador = contador + 1 
-                name = "email_" + str(contador) + ".eml"
-                GmailExtractor.save_email_to_file(my_msg, name)
-
-if __name__ == '__main__':
-	main()
-
-"""

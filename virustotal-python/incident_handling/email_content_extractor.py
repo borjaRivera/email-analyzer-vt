@@ -61,7 +61,7 @@ class EmailContentExtractor:
 
         splitted_links = str(body).split()
 
-        print(splitted_links)
+        #print(splitted_links)
 
         for link in splitted_links:
             

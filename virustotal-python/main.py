@@ -14,7 +14,8 @@ def init():
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument("-a", "--all", action='store_true', help="get all files from e-mail inbox account and analyze them.")
-	parser.add_argument("-f", "--file", nargs=1, metavar='filename', help="analyze a specific file from a path.")
+	parser.add_argument("-e", "--email", nargs=1, metavar='filename', help="analyze a specific .eml file.")
+	parser.add_argument("-s", "--sender", nargs=1, metavar='address', help="analyze all e-mails from a specific address sender.")
 	#parser.add_argument("-o", "--output", nargs=1, metavar='output', help="utput.")
 	#parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
 
@@ -143,7 +144,9 @@ def main():
 
 	args = init()
 
-	if args.file:
+
+	# analyze specific file from .eml
+	if args.email:
 		try:
 			print("\n\n[ANALYZING FILE]", args.file[0])
 			email_message = email.message_from_string(open(args.file[0]).read())
@@ -153,9 +156,11 @@ def main():
 			print("There was an error opening the file %s: %s" % (args.file[0], e))
 			quit()
 
-	elif args.all:
+
+	# analyze all e-mails from an inbox e-mail account
+	if args.all:
 		try:
-			print("\n\n[ANALYZING ALL FILES]")
+			print("\n\n[ANALYZING ALL E-MAILS]")
 
 			GmailExtractor.extract("ALL", "")
 
@@ -166,7 +171,7 @@ def main():
 			files_in_directory = next(walk(path), (None, None, []))[2]
 
 			for file in files_in_directory:
-				print("\n\n[ANALYZING FILE]", file)
+				print("\n\n[ANALYZING E-MAIL]", file)
 				try:
 					email_message = email.message_from_string(open(path + "/" + file).read())
 					analyze(email_message)
@@ -178,7 +183,33 @@ def main():
 		except:
 			pass
 
-	
+
+	# analyze all e-mails from a specific e-mail address 
+	if args.sender: 
+		try:
+			print("\n\n[ANALYZING E-MAILS FROM " + args.sender[0] + "]")
+
+			GmailExtractor.extract("FROM", args.sender[0])
+
+			time.sleep(2)
+
+			path = os.getcwd() + "/tmp"
+			
+			files_in_directory = next(walk(path), (None, None, []))[2]
+
+			for file in files_in_directory:
+				print("\n\n[ANALYZING E-MAIL]", file)
+				try:
+					email_message = email.message_from_string(open(path + "/" + file).read())
+					analyze(email_message)
+
+				except Exception as e:
+					print("There was an error opening the file %s: %s" % (file, e))
+					quit()
+				
+		except:
+			pass
+
 
 
 if __name__ == '__main__':
