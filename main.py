@@ -16,7 +16,7 @@ def init():
 	parser.add_argument("-a", "--all", action='store_true', help="get all files from e-mail inbox account and analyze them.")
 	parser.add_argument("-e", "--email", nargs=1, metavar='filename', help="analyze a specific .eml file.")
 	parser.add_argument("-s", "--sender", nargs=1, metavar='address', help="analyze all e-mails from a specific address sender.")
-	#parser.add_argument("-o", "--output", nargs=1, metavar='output', help="utput.")
+	#parser.add_argument("-o", "--output", nargs=1, metavar='output', help="output.")
 	#parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
 
 	args = parser.parse_args()
