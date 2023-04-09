@@ -25,7 +25,7 @@ poetry install --no-dev
 
 [Sign up](https://www.virustotal.com/gui/join-us) for a VirusTotal account. Then, view your VirusTotal API key.
 
-![VirusTotal view API key](images/APIKey.png)
+![VirusTotal view API key](./images/APIKey.png)
 
 ## Getting Started
 
