@@ -15,7 +15,7 @@ def init():
 
 	parser.add_argument("-a", "--all", action='store_true', help="get all files from e-mail inbox account and analyze them.")
 	parser.add_argument("-e", "--email", nargs=1, metavar='filename', help="analyze a specific .eml file.")
-	parser.add_argument("-s", "--sender", nargs=1, metavar='address', help="analyze all e-mails from a specific address sender.")
+	parser.add_argument("-s", "--sender", nargs=1, metavar='address', help="analyze all e-mails from a specific sender address.")
 	#parser.add_argument("-o", "--output", nargs=1, metavar='output', help="output.")
 	#parser.add_argument("-vt", "--virustotal", action='store_true', help="Skip virustotal chekings.")
 
@@ -71,7 +71,7 @@ def print_links(links):
 	if len(links) > 0:
 		print("\n[*] Links:")
 		for link in links:
-			print("\t%s" % (link))
+			print("\n\t%s" % (link))
 			EmailContentAnalyzer.analyze_url(link)
 
 def print_attachments(attachments):
@@ -148,12 +148,12 @@ def main():
 	# analyze specific file from .eml
 	if args.email:
 		try:
-			print("\n\n[ANALYZING FILE]", args.file[0])
-			email_message = email.message_from_string(open(args.file[0]).read())
+			print("\n\n[ANALYZING FILE]", args.email[0])
+			email_message = email.message_from_string(open(args.email[0]).read())
 			analyze(email_message)
 
 		except Exception as e:
-			print("There was an error opening the file %s: %s" % (args.file[0], e))
+			print("There was an error opening the file %s: %s" % (args.email[0], e))
 			quit()
 
 

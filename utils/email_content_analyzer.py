@@ -96,7 +96,7 @@ class EmailContentAnalyzer:
 			print("\t\t\t[*] Full report: ", full_report_url)
 
 		except Exception as e:
-			print("\t\t[*] VT: File hash not found in VirusTotal")
+			print("\t\t\tNot found in VirusTotal", e)
 
 
 	def analyze_url(url_to_analyze):
@@ -112,7 +112,7 @@ class EmailContentAnalyzer:
 			print("\t\t\t[*] Full report: ", full_report_url)
 
 		except Exception as e:
-			print("\t\t\tNot found in VirusTotal")
+			print("\t\t\tNot found in VirusTotal", e)
 
 
 	def analyze_ip(ip_to_analyze):

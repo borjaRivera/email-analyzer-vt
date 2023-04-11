@@ -48,7 +48,7 @@ class EmailContentExtractor:
         payload = email_message.get_payload()
         if maintype == "multipart":
             body = EmailContentExtractor.recursive(payload)
-        elif maintype == "text":
+        else:
             body = email_message.get_payload()
         return body
 
@@ -57,14 +57,27 @@ class EmailContentExtractor:
 
         links = []
 
-        body = EmailContentExtractor.get_body(email_message)
+        email_message_splitted = str(email_message).split()
 
-        splitted_links = str(body).split()
+        #body_splitted = EmailContentExtractor.get_body(email_message).split()
 
-        #print(splitted_links)
+        #payload_splitted = str(email_message.get_payload()[0]).split()
 
-        for link in splitted_links:
-            
+        #all_msg_splitted = payload_splitted + body_splitted
+
+        #print(email_message_splitted)
+
+
+        for link in email_message_splitted:
+            if link.find("href=") != -1:
+                link = link.replace('href=','').replace('"','')
+                #link = link.replace('"','')
+
+            if link.find("src=") != -1:
+                link = link.replace('src=','')
+                link = link.replace('"','')
+                print(link)
+
             # NOTE: review regex, some links does not match
             link = re.search(r'^(?:(?:https?|ftp)://)?(?:www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:/\S*)?$', link, re.I)
             if link:
