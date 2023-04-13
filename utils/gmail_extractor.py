@@ -116,9 +116,9 @@ class GmailExtractor:
 
         contador = 0
 
-        GmailExtractor.connect_microsoft()
+        # GmailExtractor.connect_microsoft()
 
-        """
+        
         try:
             my_mail_connection = GmailExtractor.connect()
         except Exception as e:
@@ -148,5 +148,4 @@ class GmailExtractor:
                     contador = contador + 1 
                     name = "email_" + str(contador) + ".eml"
                     GmailExtractor.save_email_to_file(my_msg, name)
-        """
-
+        
