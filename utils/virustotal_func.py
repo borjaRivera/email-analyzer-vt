@@ -24,11 +24,11 @@ class VirusTotalFunc:
 
 	def scan_url(url):
 		vtotal = Virustotal(API_KEY=API_KEY)
+
 		resp = vtotal.request("urls", data={"url": url}, method="POST")
-		# Safe encode URL in base64 format
-		# https://developers.virustotal.com/reference/url
+
 		url_id = urlsafe_b64encode(url.encode()).decode().strip("=")
-		#print(f"URL: {url} ID: {url_id}")
+
 		report = vtotal.request(f"urls/{url_id}")
 
 		return report.data
