@@ -57,7 +57,6 @@ class EmailContentExtractor:
 
         links = []
 
-        #email_message_splitted = str(email_message).split()
 
         body_splitted = EmailContentExtractor.get_body(email_message).split()
 
@@ -66,6 +65,7 @@ class EmailContentExtractor:
         all_msg_splitted = payload_splitted + body_splitted
 
         # print(all_msg_splitted)
+
 
         for link in all_msg_splitted:
             if link.find("href=") != -1:

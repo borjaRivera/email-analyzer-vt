@@ -4,6 +4,7 @@ import email
 import shutil
 import yaml
 import os
+import pathlib 
 
 class GmailExtractor:
 
@@ -28,6 +29,10 @@ class GmailExtractor:
         my_mail_connection = imaplib.IMAP4_SSL(imap_url)
 
         return my_mail_connection
+
+
+
+
 
     def login(mail_connection):
         
@@ -99,6 +104,9 @@ class GmailExtractor:
 
         contador = 0
 
+        # GmailExtractor.connect_microsoft()
+
+        
         try:
             my_mail_connection = GmailExtractor.connect()
         except Exception as e:
@@ -128,5 +136,4 @@ class GmailExtractor:
                     contador = contador + 1 
                     name = "email_" + str(contador) + ".eml"
                     GmailExtractor.save_email_to_file(my_msg, name)
-
-
+        

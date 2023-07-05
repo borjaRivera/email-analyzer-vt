@@ -9,7 +9,13 @@ A Python tool to analyze suspicious phising emails of an Gmail account inbox.
 sudo apt-get updade
 sudo apt-get install python3
 
+
+
 git clone https://github.com/borjaRivera/email-analyzer-vt.git
+
+pip install PyYAML
+pip install pywin32
+pip install virustotal-python
 ```
 
 
