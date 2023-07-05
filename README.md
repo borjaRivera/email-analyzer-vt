@@ -9,12 +9,9 @@ A Python tool to analyze suspicious phising emails of an Gmail account inbox.
 sudo apt-get updade
 sudo apt-get install python3
 
-
-
 git clone https://github.com/borjaRivera/email-analyzer-vt.git
 
 pip install PyYAML
-pip install pywin32
 pip install virustotal-python
 ```
 
@@ -29,6 +26,11 @@ Configure config.yml adding the Gmail address to be analyzed, Application Passwo
 
 ### How to get an Application Password from Gmail account
 In that Gmail account that you want to scan, you must enable two-step verification and activate an Application Password. This link [https://support.google.com/accounts/answer/185833?hl=es] explains how to do this. A 16-character password will be generated, which you will have to enter in the config.yml file.
+
+### Modify config.yml with email credentials and VT API Key
+Create the file config.yml in the root directory and introduce the email address to analyze, the Application Password created and the VirusTotal API Key.
+
+![Configuration](./lib/images/config.png)
 
 
 ## Usage
