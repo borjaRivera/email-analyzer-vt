@@ -1,6 +1,6 @@
 # email-analyzer-vt :email:
 
-A Python tool to analyze suspicious phising emails of an Gmail account inbox.
+A Python tool to analyze suspicious phishing emails of a Gmail account inbox.
 
 
 ## Installation 🛠
